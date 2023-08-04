@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 --  ***  EXAMPLE DATA  ***
 
@@ -221,3 +222,8 @@ VALUES (16,'US87973RAA86','87973RAA8','TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS
 INSERT INTO Security
 (id,isin,cusip,issuer_name,maturity_date,coupon,'type',face_value,currency,'status') 
 VALUES (17,'IE00B29LNP31','87973RAA8','First Norway Alpha Kl.IV','2021-08-06',1.123,'SOVN',340,'USD','active');
+=======
+INSERT INTO Security
+(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (1,'XS1988387210',NULL,'BNPParibasIssu 4,37% Microsoft Corp (USD)','2021-08-05',4.37,'CORP',1000,'USD','active');
+>>>>>>> cad102bdb194a9b525e5c66a737fd72088a00bb8
