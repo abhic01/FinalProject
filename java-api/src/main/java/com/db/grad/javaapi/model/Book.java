@@ -12,12 +12,12 @@ import javax.persistence.Table;
  * We will use this class to keep track of trades present in a book
  */
 @Entity
-@Table(name = "book")
+@Table(name = "Book")
 public class Book {
     // Id and name of the book variables
     @Id
     private int id;
-    private String name;
+    private String issuer_name;
 
     //  primary key id to id object
     @Id
@@ -30,7 +30,7 @@ public class Book {
     }
 
     //  column name to name object
-    @Column(name = "name", nullable = false)
+    @Column(name = "issuer_name", nullable = false)
     public String getName() {
         return name;
     }
