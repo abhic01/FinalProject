@@ -14,7 +14,7 @@ public class Trades {
     private int security_id;
     private int counter_party;
     private String currency;
-    private String status;
+    private String t_status;
     private int quantity;
     private float unit_price;
     private String buy_sell;
@@ -62,12 +62,12 @@ public class Trades {
         this.currency = currency;
     }
 
-    @Column(name="status", nullable=false)
-    public String getStatus() {
-        return status;
+    @Column(name="t_status", nullable=false)
+    public String gett_status() {
+        return t_status;
     }
-    public void setStatus(String status) {
-        this.status = status;
+    public void sett_status(String t_status) {
+        this.t_status = t_status;
     }
 
     @Column(name="quantity", nullable=false)

@@ -9,6 +9,7 @@ CREATE TABLE Security (
   type VARCHAR(255) NOT NULL,
   face_value float NOT NULL,
   currency varchar(10) NOT NULL,
+--   bond_holder varchar(255) NOT NULL,
   status varchar(32),
   PRIMARY KEY (id)
 );
@@ -44,7 +45,7 @@ CREATE TABLE Trades(
   security_id INT NOT NULL,
   counterparty_id INT NOT NULL,
   currency VARCHAR(10) NOT NULL,
-  status VARCHAR(32) NOT NULL,
+  t_status VARCHAR(32) NOT NULL,
   quantity int NOT NULL,
   unit_price FLOAT NOT NULL,
   buy_sell VARCHAR(32) NOT NULL,
