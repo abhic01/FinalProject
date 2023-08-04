@@ -1,0 +1,37 @@
+/* navbar.css */
+/* Set styles for the Navbar container */
+.navbar-container {
+    display: flex; /* Use flexbox to align items */
+    justify-content: center; /* Center align the Navbar items horizontally */
+    background-color: #333; /* Set the background color */
+    padding: 10px 0; /* Add some padding to the top and bottom */
+  }
+  
+  /* Style the Navbar links */
+  .navbar-link {
+    color: #fff; /* Set the link color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Add padding to the links */
+    margin: 0 5px; /* Add some space between links */
+  }
+  
+  /* Apply styles when the link is hovered */
+  .navbar-link:hover {
+    background-color: #555; /* Change the background color on hover */
+    border-radius: 5px; /* Add rounded corners */
+  }
+  
+  /* Style the Navbar brand/logo */
+  .navbar-brand {
+    font-size: 24px; /* Set the font size */
+    font-weight: bold; /* Set font weight */
+    color: #fff; /* Set the brand/logo color */
+    text-decoration: none; /* Remove underline */
+    margin-right: 20px; /* Add margin to create a gap between brand and links */
+  }
+  
+  /* Apply styles when the brand/logo is hovered */
+  .navbar-brand:hover {
+    color: #ddd; /* Change the color on hover */
+  }
+  

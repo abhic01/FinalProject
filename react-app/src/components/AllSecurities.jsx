@@ -53,6 +53,7 @@ export default function AllSecurities () {
                     <TableCell>Status</TableCell>
                 </TableRow>
             </TableHead>
+            <TableBody>
                 {securities.map((row) => (
                 <TableRow
                 key={row.id}
@@ -72,7 +73,6 @@ export default function AllSecurities () {
                 <TableCell>{row.status}</TableCell>
                 </TableRow>
                 ))}
-            <TableBody>
             </TableBody>
         </Table>
     </TableContainer>
