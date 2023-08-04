@@ -9,6 +9,7 @@ CREATE TABLE Security (
   type VARCHAR(255) NOT NULL,
   face_value float NOT NULL,
   currency varchar(10) NOT NULL,
+--   bond_holder varchar(255) NOT NULL,
   status varchar(32),
   PRIMARY KEY (id)
 );

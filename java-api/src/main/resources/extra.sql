@@ -21,3 +21,7 @@ JOIN security ON trades.security_id = security.id
 WHERE
 
 users.name = 'Mark Cuban';
+
+
+
+

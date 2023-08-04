@@ -10,3 +10,8 @@ export const findExpiringBonds = () => {
   const bonds = axios.get(`${hostNameUrl}/expiring/bonds`);
   return bonds;
 };
+
+export const findBondsInBooks = () => {
+  const bonds = axios.get(`${hostNameUrl}/mybooks`);
+  return bonds;
+};
