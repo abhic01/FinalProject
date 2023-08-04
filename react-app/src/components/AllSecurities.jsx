@@ -15,7 +15,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { findBonds } from '../services/SecurityServices';
 
-const AllSecurities = () => {
+export default function AllSecurities () {
     // Initially empty list containing all the securities in the database
     const [securities, setSecurities] = React.useState([]);
 
@@ -76,7 +76,5 @@ const AllSecurities = () => {
             </TableBody>
         </Table>
     </TableContainer>
-    )
+    );
 }
-
-export default AllSecurities
