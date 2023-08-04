@@ -36,3 +36,24 @@ CREATE TABLE  Book_User(
   FOREIGN KEY (book_id) REFERENCES Book(id),
   FOREIGN KEY (user_id) REFERENCES Users(id)
 );
+
+DROP TABLE IF EXISTS Trades;
+CREATE TABLE Trades(
+  id INT AUTO_INCREMENT,
+  book_id INT NOT NULL,
+  security_id INT NOT NULL,
+  counterparty_id INT NOT NULL,
+  currency VARCHAR(10) NOT NULL,
+  status VARCHAR(32) NOT NULL,
+  quantity int NOT NULL,
+  unit_price FLOAT NOT NULL,
+  buy_sell VARCHAR(32) NOT NULL,
+  trade_date DATE NOT NULL,
+  settlement_date DATE NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (security_id) REFERENCES Security(id),
+  FOREIGN KEY (book_id) REFERENCES Book(id)
+  -- FOREIGN KEY (counterparty_id) REFERENCES Counter_Party(id)
+);
+
+ALTER TABLE Book_User ADD PRIMARY KEY(book_id, user_id);
