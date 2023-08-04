@@ -3,6 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import { Route, Routes } from 'react-router-dom';
+import AllSecurities from "./components/AllSecurities";
 
 // The code below is used to make a basic view for Story 1
 // import { Security } from "./components/Security";

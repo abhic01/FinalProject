@@ -13,9 +13,9 @@ import { findBonds } from '../services/SecurityServices';
 
 const AllSecurities = () => {
     // Initially empty list containing all the securities in the database
-    const [securities, setSecurities] = useState([]);
+    const [securities, setSecurities] = React.useState([]);
 
-    useEffect(() => {
+    React.useEffect(() => {
         getSecuritiesFromAPI();
     }, []
     )
@@ -49,7 +49,7 @@ const AllSecurities = () => {
                     <TableCell>Status</TableCell>
                 </TableRow>
             </TableHead>
-                {rows.map((row) => (
+                {securities.map((row) => (
                 <TableRow
                 key={row.id}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
