@@ -5,8 +5,8 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "Book_User")
-public class Book_User {
+@Table (name = "Book_user")
+public class Book_user {
     @EmbeddedId
     private Book_User_Key key;
 

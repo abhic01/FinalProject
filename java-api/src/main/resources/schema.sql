@@ -25,7 +25,7 @@ CREATE TABLE Users (
 DROP TABLE IF EXISTS Book;
 CREATE TABLE Book (
   id INT AUTO_INCREMENT,
-  issuer_name VARCHAR(255) NOT NULL,
+  name VARCHAR(255) NOT NULL,
   PRIMARY KEY (id)
 );
 
@@ -44,7 +44,7 @@ CREATE TABLE Trades(
   security_id INT NOT NULL,
   counterparty_id INT NOT NULL,
   currency VARCHAR(10) NOT NULL,
-  status VARCHAR(32) NOT NULL,
+  t_status VARCHAR(32) NOT NULL,
   quantity int NOT NULL,
   unit_price FLOAT NOT NULL,
   buy_sell VARCHAR(32) NOT NULL,
