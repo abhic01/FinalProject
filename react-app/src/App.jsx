@@ -1,8 +1,8 @@
 import React from "react";
-import { Pets } from "./components/pets/Pets";
+import { Security } from "./components/Security";
 
 const App = () => {
-  return <Pets />;
+  return <Security />;
 };
 
 export default App;

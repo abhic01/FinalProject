@@ -1,0 +1,6 @@
+.bonds {
+    margin:20px 100px 20px 100px;
+    display: table;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
