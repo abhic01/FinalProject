@@ -1,6 +1,10 @@
 // We will use this file to make a table component which uses 'Security' components as children
 // https://mui.com/material-ui/react-table/
 
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 import * as React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
