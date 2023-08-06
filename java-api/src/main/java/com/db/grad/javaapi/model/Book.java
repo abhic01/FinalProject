@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Book {
     @Id
     private int id;
-    private String issuer_name;
+    private String name;
 
     @Id
     @Column(name = "id", nullable = true)
@@ -23,11 +23,11 @@ public class Book {
         this.id = id;
     }
 
-    @Column(name = "issuer_name", nullable = false)
+    @Column(name = "name", nullable = false)
     public String getIssuer_name() {
-        return issuer_name;
+        return name;
     }
-    public void setIssuer_name(String issuer_name) {
-        this.issuer_name = issuer_name;
+    public void setIssuer_name(String name) {
+        this.name = name;
     }
 }
