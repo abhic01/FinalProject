@@ -39,72 +39,72 @@ INSERT INTO Book_User (book_id, user_id) VALUES
 --   Given data for Securities table inserts 
 
 INSERT INTO Security
-(isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES ('XS1988387210',NULL,'BNPParibasIssu 4,37% Microsoft Corp (USD)','2021-08-05',4.37,'CORP',1000,'USD','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (1,'XS1988387210','AZ Holdings Inc',NULL,'BNPParibasIssu 4,37% Microsoft Corp (USD)','2021-08-05',4.37,'CORP',1000,'USD','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (2,'A12356111','123456bh0','UBS Facebook (USD)','2021-09-30',2,'CORP',900,'USD','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (2,'A12356111','Sovereign Investments','123456bh0','UBS Facebook (USD)','2021-09-30',2,'CORP',900,'USD','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (3,'USN0280EAR64','123456780','Airbus 3.15%  USD','2021-07-30',3.15,'CORP',900,'USD','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (3,'USN0280EAR64','Acme co','123456780','Airbus 3.15%  USD','2021-07-30',3.15,'CORP',900,'USD','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (4,'USU02320AG12','AMZN 3.15 08-22-27 REGS','Amazon','2021-08-03',3.15,'CORP',900,'USD','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (4,'USU02320AG12','Muncipal Gov Of Orange County','AMZN 3.15 08-22-27 REGS','Amazon','2021-08-03',3.15,'CORP',900,'USD','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (5,'GB00B6460505','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (5,'GB00B6460505','Goldman Sachs','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (6,'GB00B6460506','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (6,'GB00B6460506','Goldman Sachs','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (7,'GB00B6460507','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (7,'GB00B6460507','UBS','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (8,'GB00B6460508','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (8,'GB00B6460508','UBS','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (9,'GB00B6460509','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (9,'GB00B6460509','Barclays','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (10,'GB00B6460510','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (10,'GB00B6460510','Barclays','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (11,'GB00B6460511','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (11,'GB00B6460511','Barclays','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (12,'GB00B6460512','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (12,'GB00B6460512','British Telecom','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (13,'GB00B6460513','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (13,'GB00B6460513','Pension Holdings','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (14,'GB00B6460514','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (14,'GB00B6460514','Pension Holdings','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (15,'GB00B6460515','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (15,'GB00B6460515','Pension Holdings','BDCHBW8','HM Treasury United Kingdon','2021-08-09',0.75,'GOVN',900,'GBP','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (16,'US87973RAA86','87973RAA8','TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S','2021-08-09',2.02,'SOVN',690,'USD','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (16,'US87973RAA86','Zurich Pension fund 4','87973RAA8','TEMASEK FINL I LTD GLOBAL MEDIUM TERM NTS BOOK ENTRY REG S','2021-08-09',2.02,'SOVN',690,'USD','active');
 
 INSERT INTO Security
-(id,isin,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
-VALUES (17,'IE00B29LNP31','87973RAA8','First Norway Alpha Kl.IV','2021-08-06',1.123,'SOVN',340,'USD','active');
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (17,'IE00B29LNP31','Zurich Pension fund 4','87973RAA8','First Norway Alpha Kl.IV','2021-08-06',1.123,'SOVN',340,'USD','active');
 
 
 
