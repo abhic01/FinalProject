@@ -14,10 +14,13 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { findUserBonds } from '../services/SecurityServices';
+import { useParams } from 'react-router-dom';
 
-export default function UserBonds () {
+export default function UserBonds (props) {
     // Initially empty list containing all the securities in the database
     const [securities, setSecurities] = React.useState([]);
+
+    const { user } = useParams();
 
     React.useEffect(() => {
         getSecuritiesFromAPI();
@@ -25,8 +28,8 @@ export default function UserBonds () {
     )
 
     // Function that gets all data from Security table and sets it to 'securities' variable
-    const getSecuritiesFromAPI = () => {
-        findUserBonds()
+    const getSecuritiesFromAPI = () => { 
+        findUserBonds(user)
             .then(res =>{
                 setSecurities(res.data);
             })
@@ -72,7 +75,7 @@ export default function UserBonds () {
                 <TableCell>{row.face_value}</TableCell>
                 <TableCell>{row.currency}</TableCell>
                 <TableCell>{row.status}</TableCell>
-                <TableCell>{row.user}</TableCell>
+                <TableCell>{row.name}</TableCell>
                 </TableRow>
                 ))}
             </TableBody>

@@ -37,3 +37,26 @@ FROM Security
 GROUP BY bond_holder
 
 --current position client hold
+SELECT
+    S.bond_holder,
+    BU.User_ID,
+    BU.Book_ID,
+    CAST(
+        SUM(CASE
+            WHEN T.Buy_Sell = 'buy' AND T.Currency = 'USD' THEN T.Quantity * -T.Unit_Price
+            WHEN T.Buy_Sell = 'sell' AND T.Currency = 'USD' THEN T.Quantity * T.Unit_Price
+            WHEN T.Buy_Sell = 'buy' AND T.Currency = 'GBP' THEN T.Quantity * -T.Unit_Price * 1.28
+            WHEN T.Buy_Sell = 'sell' AND T.Currency = 'GBP' THEN T.Quantity * T.Unit_Price * 1.28
+            ELSE 0
+        END) AS DECIMAL (10,2)
+    )AS USD_Current_Position
+FROM
+    Trades AS T
+JOIN
+    Security AS S ON T.security_id = S.id
+JOIN
+    Book_User AS BU ON T.book_id = BU.book_id
+GROUP BY
+    S.bond_holder,
+    BU.User_ID,
+    BU.Book_ID;

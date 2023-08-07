@@ -22,4 +22,10 @@ public class SecurityService {
     public List<Security> getExpiringSecurities() {
         return this.securityRepository.getExpiringSecurities();
     }
+
+
+    public List<Security> getExpiredSecurities() {
+        return this.securityRepository.getExpiredSecurities();
+    }
+    
 }

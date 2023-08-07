@@ -11,9 +11,7 @@ public class SecurityBookTradesService {
     @Autowired
     private SecurityBookTradesRepository securityBookTradesRepository;
 
-    public List<SecurityBookTrades> getAll(String user) {
-        SecurityBookTrades userObject = new SecurityBookTrades();
-        userObject.setUser(user);
-        return securityBookTradesRepository.findAll(userObject);
+    public List<SecurityBookTrades> getAllByName(String user) {
+        return securityBookTradesRepository.findAllByBName(user);
     }
 }

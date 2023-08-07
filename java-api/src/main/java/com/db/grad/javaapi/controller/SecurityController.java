@@ -27,4 +27,10 @@ public class SecurityController {
     public List<Security> getExpiringSecurities() {
         return SecurityService.getExpiringSecurities();
     }
+
+    // Display all the bonds that Pass maturity but not redeemed
+    @GetMapping("/expired/bonds")
+    public List<Security>getExpiredSecurities () {
+        return SecurityService.getExpiredSecurities();
+    }
 }

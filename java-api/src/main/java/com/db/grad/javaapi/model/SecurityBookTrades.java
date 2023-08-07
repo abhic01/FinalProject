@@ -13,104 +13,75 @@ import org.hibernate.annotations.Immutable;
 @Table(name = "Security_Book_Trades")
 public class SecurityBookTrades implements Serializable {
     @Id
+    @Column(name = "id", insertable = false, updatable = false)
     private int id;
+
     private String isin;
     private String cusip;
     private String issuer_name;
     private Date maturity_date;
-    private float coupon;
+    private double coupon;
     private String type;
-    private float face_value;
+    private double face_value;
     private String currency;
     private String status;
-    private String user;
+    private String name;
 
-    @Id
-    @Column(name="ID", insertable=false, updatable=false)
     public int getId() {
         return id;
     }
-    public void setId(int id) {
-        this.id = id;
-    }
 
-    @Column(name="ISIN", nullable=true)
+    @Column(name = "isin", nullable = false)
     public String getIsin() {
         return isin;
     }
-    public void setIsin(String isin) {
-        this.isin = isin;
-    }
 
-    @Column(name="CUSIP", nullable=false)
+    @Column(name = "cusip", nullable = true)
     public String getCusip() {
         return cusip;
     }
-    public void setCusip(String cusip) {
-        this.cusip = cusip;
-    }
 
-    @Column(name="Issuer Name", nullable=true)
+    @Column(name = "issuer_name", nullable = false)
     public String getIssuer_name() {
         return issuer_name;
     }
-    public void setIssuer_name(String issuer_name) {
-        this.issuer_name = issuer_name;
-    }
 
-    @Column(name="Maturity Date", nullable=true)
+    @Column(name = "maturity_date", nullable = false)
     public Date getMaturity_date() {
         return maturity_date;
     }
-    public void setMaturity_date(Date maturity_date) {
-        this.maturity_date = maturity_date;
-    }
 
-    @Column(name="Coupon %", nullable=true)
-    public float getCoupon() {
+    @Column(name = "coupon", nullable = false)
+    public double getCoupon() {
         return coupon;
     }
-    public void setCoupon(float coupon) {
-        this.coupon = coupon;
-    }
 
-    @Column(name="Type", nullable=true)
+    @Column(name = "type", nullable = false)
     public String getType() {
         return type;
     }
-    public void setType(String type) {
-        this.type = type;
-    }
 
-    @Column(name="Face Value", nullable=true)
-    public float getFace_value() {
+    @Column(name = "face_value", nullable = false)
+    public double getFace_value() {
         return face_value;
     }
-    public void setFace_value(float face_value) {
-        this.face_value = face_value;
-    }
 
-    @Column(name="Currency", nullable=true)
+    @Column(name = "currency", nullable = false)
     public String getCurrency() {
         return currency;
     }
-    public void setCurrency(String currency) {
-        this.currency = currency;
-    }
 
-    @Column(name="Status", nullable=true)
+    @Column(name = "status", nullable = false)
     public String getStatus() {
         return status;
     }
-    public void setStatus(String status) {
-        this.status = status;
+
+    @Column(name = "name", nullable = false)
+    public String getName() {
+        return name;
     }
 
-    @Column(name="User", nullable=true)
-    public String getUser() {
-        return user;
-    }
-    public void setUser(String user) {
-        this.user = user;
+    public void setOwnerName(String name) {
+        this.name = name;
     }
 }
