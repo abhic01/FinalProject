@@ -18,15 +18,15 @@ public class SecurityBookTrades implements Serializable {
     private String cusip;
     private String issuer_name;
     private Date maturity_date;
-    private float coupon;
+    private double coupon;
     private String type;
-    private float face_value;
+    private double face_value;
     private String currency;
     private String status;
-    private String user;
+    private String name;
 
     @Id
-    @Column(name="ID", insertable=false, updatable=false)
+    @Column(name = "id", nullable = true)
     public int getId() {
         return id;
     }
@@ -34,7 +34,7 @@ public class SecurityBookTrades implements Serializable {
         this.id = id;
     }
 
-    @Column(name="ISIN", nullable=true)
+    @Column(name = "isin", nullable = false)
     public String getIsin() {
         return isin;
     }
@@ -42,7 +42,7 @@ public class SecurityBookTrades implements Serializable {
         this.isin = isin;
     }
 
-    @Column(name="CUSIP", nullable=false)
+    @Column(name = "cusip", nullable = true)
     public String getCusip() {
         return cusip;
     }
@@ -50,7 +50,7 @@ public class SecurityBookTrades implements Serializable {
         this.cusip = cusip;
     }
 
-    @Column(name="Issuer Name", nullable=true)
+    @Column(name = "issuer_name", nullable = false)
     public String getIssuer_name() {
         return issuer_name;
     }
@@ -58,7 +58,7 @@ public class SecurityBookTrades implements Serializable {
         this.issuer_name = issuer_name;
     }
 
-    @Column(name="Maturity Date", nullable=true)
+    @Column(name = "maturity_date", nullable = false)
     public Date getMaturity_date() {
         return maturity_date;
     }
@@ -66,15 +66,15 @@ public class SecurityBookTrades implements Serializable {
         this.maturity_date = maturity_date;
     }
 
-    @Column(name="Coupon %", nullable=true)
-    public float getCoupon() {
+    @Column(name = "coupon", nullable = false)
+    public double getCoupon() {
         return coupon;
     }
-    public void setCoupon(float coupon) {
+    public void setCoupon(double coupon) {
         this.coupon = coupon;
     }
 
-    @Column(name="Type", nullable=true)
+    @Column(name = "type", nullable = false)
     public String getType() {
         return type;
     }
@@ -82,15 +82,15 @@ public class SecurityBookTrades implements Serializable {
         this.type = type;
     }
 
-    @Column(name="Face Value", nullable=true)
-    public float getFace_value() {
+    @Column(name = "face_value", nullable = false)
+    public double getFace_value() {
         return face_value;
     }
-    public void setFace_value(float face_value) {
+    public void setFace_value(double face_value) {
         this.face_value = face_value;
     }
 
-    @Column(name="Currency", nullable=true)
+    @Column(name = "currency", nullable = false)
     public String getCurrency() {
         return currency;
     }
@@ -98,7 +98,7 @@ public class SecurityBookTrades implements Serializable {
         this.currency = currency;
     }
 
-    @Column(name="Status", nullable=true)
+    @Column(name = "status", nullable = false)
     public String getStatus() {
         return status;
     }
@@ -106,11 +106,12 @@ public class SecurityBookTrades implements Serializable {
         this.status = status;
     }
 
-    @Column(name="User", nullable=true)
-    public String getUser() {
-        return user;
+    @Column(name = "name", nullable = false)
+    public String getName() {
+        return name;
     }
-    public void setUser(String user) {
-        this.user = user;
+    public void setName(String name) {
+        this.name = name;
     }
+
 }

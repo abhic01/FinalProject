@@ -13,7 +13,7 @@ public class SecurityBookTradesService {
 
     public List<SecurityBookTrades> getAll(String user) {
         SecurityBookTrades userObject = new SecurityBookTrades();
-        userObject.setUser(user);
+        userObject.setName(user);
         return securityBookTradesRepository.findAll(userObject);
     }
 }

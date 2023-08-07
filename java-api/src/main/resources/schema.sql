@@ -60,10 +60,11 @@ CREATE TABLE Trades(
 ALTER TABLE Book_User ADD PRIMARY KEY(book_id, user_id);
 
 -- Story 2 Table (Bonds in books I am responsible for)
+DROP TABLE IF EXISTS Security_Book_Trades;
 CREATE VIEW Security_Book_Trades AS
-SELECT ROW_NUMBER() OVER(ORDER BY (SELECT 1)) "ID", Security.isin AS ISIN, Security.cusip AS CUSIP, Security.issuer_name AS "Issuer Name", Security.maturity_date AS "Maturity Date", Security.coupon AS "Coupon %", Security.type AS "Type", Security.face_value AS "Face Value", Security.currency AS "Currency", Security.status AS "Status", Users.name AS "User"
+SELECT ROW_NUMBER() OVER(ORDER BY (SELECT 1)) id, Security.isin AS isin, Security.cusip AS cusip, Security.issuer_name AS issuer_name, Security.maturity_date AS maturity_date, Security.coupon AS coupon, Security.type AS type, Security.face_value AS face_value, Security.currency AS currency, Security.status AS status, Users.name AS name
 FROM Users
 JOIN Book_User ON Users.id = Book_User.user_id
 JOIN Book ON Book_User.Book_id = Book.id
 JOIN Trades ON Book.id = Trades.Book_id
-JOIN Security ON Trades.Security_id = Security.id
+JOIN Security ON Trades.Security_id = Security.id;

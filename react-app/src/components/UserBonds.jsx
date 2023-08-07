@@ -72,7 +72,7 @@ export default function UserBonds () {
                 <TableCell>{row.face_value}</TableCell>
                 <TableCell>{row.currency}</TableCell>
                 <TableCell>{row.status}</TableCell>
-                <TableCell>{row.user}</TableCell>
+                <TableCell>{row.name}</TableCell>
                 </TableRow>
                 ))}
             </TableBody>
