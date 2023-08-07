@@ -8,8 +8,8 @@
 INSERT INTO Book (id, name) VALUES
   (1, 'Trading_book_1'),
   (2, 'Trading_book_2'),
-  (3, 'Trading_book_3');
-  (4, 'Trading_book_4');
+  (3, 'Trading_book_3'),
+  (4, 'Trading_book_4'),
   (6, 'Trading_book_6');
 
 -- example data for into 'Users' table
@@ -28,11 +28,11 @@ INSERT INTO Users (id, name, email, role) VALUES
 
 -- example data for 'book_user' table
 
-INSERT INTO Book_User (book_id, user_id) VALUES
+INSERT INTO Book_User (user_id, book_id) VALUES
   (1, 1),
   (1, 4),
   (2, 2),
-  (3, 3)
+  (3, 3),
   (3, 6);
 
 
