@@ -4,7 +4,6 @@ import "./Login.module.css";
 import Home from "./Home";
 import Login from "./Login";
 import Signup from "./Signup";
-// import PhoneSignUp from "./PhoneSignUp";
 import ProtectedRoute from "./ProtectedRoute";
 import { UserAuthContextProvider } from "../context/userAuthContext";
 import React from "react";
@@ -26,7 +25,6 @@ function FirebaseLogin() {
               />
               <Route path="/" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
-           {/* <Route path="/phonesignup" element={<PhoneSignUp />} /> */}
             </Routes>
           </UserAuthContextProvider>
         </Col>
