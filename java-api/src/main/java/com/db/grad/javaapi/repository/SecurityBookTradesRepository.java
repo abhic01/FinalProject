@@ -10,6 +10,6 @@ import com.db.grad.javaapi.model.SecurityBookTrades;
 @Table(name = "Security_Book_Trades")
 public interface SecurityBookTradesRepository extends ReadOnlyRepository<SecurityBookTrades, Long>{
     // Creates a list of all the trades a specific User is responsible for
-    @Query(nativeQuery = true, value = "SELECT * FROM Security_Book_Trades WHERE name = :user")
-    List<SecurityBookTrades> findAll(SecurityBookTrades user);
+    @Query(nativeQuery = true, value = "SELECT * FROM Security_Book_Trades WHERE name = :user_name")
+    List<SecurityBookTrades> findAllByBName(String user_name);
 }

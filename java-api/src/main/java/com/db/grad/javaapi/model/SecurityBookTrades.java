@@ -13,7 +13,9 @@ import org.hibernate.annotations.Immutable;
 @Table(name = "Security_Book_Trades")
 public class SecurityBookTrades implements Serializable {
     @Id
+    @Column(name = "id", insertable = false, updatable = false)
     private int id;
+
     private String isin;
     private String cusip;
     private String issuer_name;
@@ -25,93 +27,61 @@ public class SecurityBookTrades implements Serializable {
     private String status;
     private String name;
 
-    @Id
-    @Column(name = "id", nullable = true)
     public int getId() {
         return id;
-    }
-    public void setId(int id) {
-        this.id = id;
     }
 
     @Column(name = "isin", nullable = false)
     public String getIsin() {
         return isin;
     }
-    public void setIsin(String isin) {
-        this.isin = isin;
-    }
 
     @Column(name = "cusip", nullable = true)
     public String getCusip() {
         return cusip;
-    }
-    public void setCusip(String cusip) {
-        this.cusip = cusip;
     }
 
     @Column(name = "issuer_name", nullable = false)
     public String getIssuer_name() {
         return issuer_name;
     }
-    public void setIssuer_name(String issuer_name) {
-        this.issuer_name = issuer_name;
-    }
 
     @Column(name = "maturity_date", nullable = false)
     public Date getMaturity_date() {
         return maturity_date;
-    }
-    public void setMaturity_date(Date maturity_date) {
-        this.maturity_date = maturity_date;
     }
 
     @Column(name = "coupon", nullable = false)
     public double getCoupon() {
         return coupon;
     }
-    public void setCoupon(double coupon) {
-        this.coupon = coupon;
-    }
 
     @Column(name = "type", nullable = false)
     public String getType() {
         return type;
-    }
-    public void setType(String type) {
-        this.type = type;
     }
 
     @Column(name = "face_value", nullable = false)
     public double getFace_value() {
         return face_value;
     }
-    public void setFace_value(double face_value) {
-        this.face_value = face_value;
-    }
 
     @Column(name = "currency", nullable = false)
     public String getCurrency() {
         return currency;
-    }
-    public void setCurrency(String currency) {
-        this.currency = currency;
     }
 
     @Column(name = "status", nullable = false)
     public String getStatus() {
         return status;
     }
-    public void setStatus(String status) {
-        this.status = status;
-    }
 
     @Column(name = "name", nullable = false)
     public String getName() {
         return name;
     }
-    public void setName(String name) {
+
+    public void setOwnerName(String name) {
         this.name = name;
     }
-
 }
