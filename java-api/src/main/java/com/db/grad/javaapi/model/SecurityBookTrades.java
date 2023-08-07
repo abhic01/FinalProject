@@ -1,31 +1,32 @@
 package com.db.grad.javaapi.model;
-import java.util.Date;
+
+import java.io.Serializable;
+import java.sql.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import org.hibernate.annotations.Immutable;
 
 @Entity
-@Table(name = "security")
-public class Security {
+@Immutable
+@Table(name = "Security_Book_Trades")
+public class SecurityBookTrades implements Serializable {
     @Id
     private int id;
     private String isin;
-    private String bond_holder;
     private String cusip;
     private String issuer_name;
-    private Date maturity_Date;
+    private Date maturity_date;
     private float coupon;
     private String type;
     private float face_value;
     private String currency;
     private String status;
+    private String user;
 
-    /*
-     * Getters and setters
-     */
     @Id
-    @Column(name = "id", nullable = true)
+    @Column(name="ID", insertable=false, updatable=false)
     public int getId() {
         return id;
     }
@@ -33,7 +34,7 @@ public class Security {
         this.id = id;
     }
 
-    @Column(name = "isin", nullable = false)
+    @Column(name="ISIN", nullable=true)
     public String getIsin() {
         return isin;
     }
@@ -41,15 +42,7 @@ public class Security {
         this.isin = isin;
     }
 
-    @Column(name = "bond_holder", nullable = false)
-    public String getBond_holder() {
-        return bond_holder;
-    }
-    public void setBond_holder(String bond_holder) {
-        this.bond_holder = bond_holder;
-    }
-
-    @Column(name = "cusip", nullable = true)
+    @Column(name="CUSIP", nullable=false)
     public String getCusip() {
         return cusip;
     }
@@ -57,7 +50,7 @@ public class Security {
         this.cusip = cusip;
     }
 
-    @Column(name = "issuer_name", nullable = false)
+    @Column(name="Issuer Name", nullable=true)
     public String getIssuer_name() {
         return issuer_name;
     }
@@ -65,15 +58,15 @@ public class Security {
         this.issuer_name = issuer_name;
     }
 
-    @Column(name = "maturity_date", nullable = false)
-    public Date getMaturity_Date() {
-        return maturity_Date;
+    @Column(name="Maturity Date", nullable=true)
+    public Date getMaturity_date() {
+        return maturity_date;
     }
-    public void setMaturity_Date(Date maturity_Date) {
-        this.maturity_Date = maturity_Date;
+    public void setMaturity_date(Date maturity_date) {
+        this.maturity_date = maturity_date;
     }
 
-    @Column(name = "coupon", nullable = false)
+    @Column(name="Coupon %", nullable=true)
     public float getCoupon() {
         return coupon;
     }
@@ -81,7 +74,7 @@ public class Security {
         this.coupon = coupon;
     }
 
-    @Column(name = "type", nullable = false)
+    @Column(name="Type", nullable=true)
     public String getType() {
         return type;
     }
@@ -89,7 +82,7 @@ public class Security {
         this.type = type;
     }
 
-    @Column(name = "face_value", nullable = false)
+    @Column(name="Face Value", nullable=true)
     public float getFace_value() {
         return face_value;
     }
@@ -97,7 +90,7 @@ public class Security {
         this.face_value = face_value;
     }
 
-    @Column(name = "currency", nullable = false)
+    @Column(name="Currency", nullable=true)
     public String getCurrency() {
         return currency;
     }
@@ -105,11 +98,19 @@ public class Security {
         this.currency = currency;
     }
 
-    @Column(name = "status", nullable = false)
+    @Column(name="Status", nullable=true)
     public String getStatus() {
         return status;
     }
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @Column(name="User", nullable=true)
+    public String getUser() {
+        return user;
+    }
+    public void setUser(String user) {
+        this.user = user;
     }
 }

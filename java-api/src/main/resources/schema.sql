@@ -59,28 +59,11 @@ CREATE TABLE Trades(
 
 ALTER TABLE Book_User ADD PRIMARY KEY(book_id, user_id);
 
--- Story 2 Table
-CREATE VIEW BOOK
-SELECT
-security.isin,
-security.cusip,
-security.issuer_name,
-security.maturity_date,
-security.coupon,
-security.type,
-security.face_value,
-security.currency,
-security.status
-
-FROM
-
-users
-
-JOIN book_user ON users.id = book_user.user_id
-JOIN book ON book_user.book_id = book.id
-JOIN trades ON book.id = trades.book_id
-JOIN security ON trades.security_id = security.id
-
-WHERE
-
-users.name = 'Mark Cuban';
+-- Story 2 Table (Bonds in books I am responsible for)
+CREATE VIEW Security_Book_Trades AS
+SELECT ROW_NUMBER() OVER(ORDER BY (SELECT 1)) "ID", Security.isin AS ISIN, Security.cusip AS CUSIP, Security.issuer_name AS "Issuer Name", Security.maturity_date AS "Maturity Date", Security.coupon AS "Coupon %", Security.type AS "Type", Security.face_value AS "Face Value", Security.currency AS "Currency", Security.status AS "Status", Users.name AS "User"
+FROM Users
+JOIN Book_User ON Users.id = Book_User.user_id
+JOIN Book ON Book_User.Book_id = Book.id
+JOIN Trades ON Book.id = Trades.Book_id
+JOIN Security ON Trades.Security_id = Security.id
