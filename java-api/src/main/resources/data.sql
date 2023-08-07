@@ -32,7 +32,7 @@ INSERT INTO Book_User (user_id, book_id) VALUES
   (1, 1),
   (1, 4),
   (2, 2),
-  (3, 3)
+  (3, 3),
   (3, 6);
 
 
