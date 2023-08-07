@@ -13,6 +13,7 @@ import Home from './components/Home';
 import FirebaseLogin from './components/FirebaseLogin';
 import './navbar.css'; // Import the CSS file
 import './App.css'
+import SecurityForm from './components/SecurityForm';
 
 function App() {
   return (
@@ -46,6 +47,9 @@ function App() {
               <Nav.Link href="/login" className="navbar-link">
                 Log In Page
               </Nav.Link>
+              <Nav.Link href="/add/bond" className="navbar-link">
+                Add Bonds
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -61,6 +65,7 @@ function App() {
           <Route path="/trades" element={<ClientPosition />} />
           <Route path="/login/*" element={<FirebaseLogin />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/add/bond" element={<SecurityForm />} />
         </Routes>
       </Router>
     </>
