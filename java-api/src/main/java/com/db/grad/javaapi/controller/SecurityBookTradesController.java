@@ -26,7 +26,7 @@ public class SecurityBookTradesController {
         this.securityBookTradesService = sbts;
     }
 
-    @GetMapping("/user/{name}")
+    @GetMapping("/bonds/{name}")
     public ResponseEntity<List<SecurityBookTrades>> getUserSecurities(@PathVariable(value = "name") String name) throws ResourceNotFoundException {
         List<SecurityBookTrades> securities = securityBookTradesService.getAll(name);
         return ResponseEntity.ok().body(securities);

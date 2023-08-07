@@ -27,7 +27,7 @@
     font-weight: bold; /* Set font weight */
     color: #fff; /* Set the brand/logo color */
     text-decoration: none; /* Remove underline */
-    margin-right: 20px; /* Add margin to create a gap between brand and links */
+    margin-bottom: 20px; /* Add margin to create a gap between brand and links */
   }
   
   /* Apply styles when the brand/logo is hovered */

@@ -12,6 +12,8 @@ public class SecurityBookTradesService {
     private SecurityBookTradesRepository securityBookTradesRepository;
 
     public List<SecurityBookTrades> getAll(String user) {
-        return securityBookTradesRepository.findAll(user);
+        SecurityBookTrades userObject = new SecurityBookTrades();
+        userObject.setUser(user);
+        return securityBookTradesRepository.findAll(userObject);
     }
 }

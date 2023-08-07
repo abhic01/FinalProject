@@ -13,9 +13,9 @@ INSERT INTO Book (id, name) VALUES
 -- example data for into 'Users' table
 
 INSERT INTO Users (id, name, email, role) VALUES
-  (1, 'John Cena', 'john@example.com', 'investor'),
-  (2, 'Mark Cuban', 'mark@example.com', 'analyst'),
-  (3, 'Michael Jordan', 'michael@example.com', 'associate');
+  (1, 'John', 'john@example.com', 'investor'),
+  (2, 'Mark', 'mark@example.com', 'analyst'),
+  (3, 'Michael', 'michael@example.com', 'associate');
 
 -- example data for 'counterparty' table
 

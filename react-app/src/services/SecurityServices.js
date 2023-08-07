@@ -13,4 +13,5 @@ export const findExpiringBonds = () => {
 
 export const findUserBonds = (user) => {
   const bonds = axios.get(`${hostNameUrl}/bonds/${user}`);
+  return bonds;
 }
