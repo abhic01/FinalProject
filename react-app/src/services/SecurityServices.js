@@ -15,3 +15,7 @@ export const findBondsInBooks = () => {
   const bonds = axios.get(`${hostNameUrl}/mybooks`);
   return bonds;
 };
+
+export const findUserBonds = () => {
+  const bonds = axios.get('${hostNameUrl}/user/bonds');
+}
