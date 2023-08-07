@@ -20,3 +20,8 @@ export const findExpiredBonds = () => {
   const bonds = axios.get(`${hostNameUrl}/expired/bonds`);
   return bonds;
 };
+
+export const findClientPosition = (user) => {
+  const bonds = axios.get(`${hostNameUrl}/client_position/${user}`);
+  return bonds;
+};

@@ -8,6 +8,7 @@ import ExpiringBonds from "./components/ExpiringSecurities"
 import ExpiredBonds from './components/ExpiredSecurities';
 import ProtectedRoute from "./components/ProtectedRoute";
 import UserBonds from "./components/UserBonds"
+import ClientPosition from './components/ClientPosition';
 import Home from './components/Home';
 import FirebaseLogin from './components/FirebaseLogin';
 import './navbar.css'; // Import the CSS file
@@ -36,6 +37,9 @@ function App() {
               <Nav.Link href="/expired" className="navbar-link">
                 Expired Bonds
               </Nav.Link>
+              <Nav.Link href="/trades" className="navbar-link">
+                All Trades
+              </Nav.Link>
               {/* <Nav.Link href="/bonds/:user" className="navbar-link">
                 My Bonds
               </Nav.Link> */}
@@ -54,6 +58,7 @@ function App() {
           <Route path="/expiring" element={<ExpiringBonds />} />
           <Route path="/expired" element={<ExpiredBonds />} />
           <Route path="/bonds/:user" element={<UserBonds /> } />
+          <Route path="/trades" element={<ClientPosition />} />
           <Route path="/login/*" element={<FirebaseLogin />} />
           <Route path="/home" element={<Home />} />
         </Routes>
