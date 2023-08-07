@@ -54,6 +54,7 @@ export default function UserBonds (props) {
                     <TableCell>Face Value</TableCell>
                     <TableCell>Currency</TableCell>
                     <TableCell>Status</TableCell>
+                    <TableCell>User</TableCell>
                 </TableRow>
             </TableHead>
             <TableBody>
@@ -74,6 +75,7 @@ export default function UserBonds (props) {
                 <TableCell>{row.face_value}</TableCell>
                 <TableCell>{row.currency}</TableCell>
                 <TableCell>{row.status}</TableCell>
+                <TableCell>{row.name}</TableCell>
                 </TableRow>
                 ))}
             </TableBody>
