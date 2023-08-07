@@ -1,5 +1,6 @@
 import { hostNameUrl } from "../config/api";
 import axios from "axios";
+import http from './axios-common'
 
 export const findBonds = () => {
   const bonds = axios.get(`${hostNameUrl}/bonds`);
@@ -16,7 +17,7 @@ export const findUserBonds = (user) => {
   return bonds;
 }
 
-export const findExpiredBonds = () => {
-  const bonds = axios.get(`${hostNameUrl}/expired/bonds`);
-  return bonds;
-};
+// for SecurityForm
+export function saveSecurity(Security){
+  return http.post("/bonds", Security)
+}
