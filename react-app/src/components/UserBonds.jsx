@@ -26,7 +26,7 @@ export default function UserBonds () {
 
     // Function that gets all data from Security table and sets it to 'securities' variable
     const getSecuritiesFromAPI = () => {
-        findUserBonds()
+        findUserBonds("John")
             .then(res =>{
                 setSecurities(res.data);
             })
@@ -51,7 +51,6 @@ export default function UserBonds () {
                     <TableCell>Face Value</TableCell>
                     <TableCell>Currency</TableCell>
                     <TableCell>Status</TableCell>
-                    <TableCell>User</TableCell>
                 </TableRow>
             </TableHead>
             <TableBody>
@@ -72,7 +71,6 @@ export default function UserBonds () {
                 <TableCell>{row.face_value}</TableCell>
                 <TableCell>{row.currency}</TableCell>
                 <TableCell>{row.status}</TableCell>
-                <TableCell>{row.name}</TableCell>
                 </TableRow>
                 ))}
             </TableBody>
