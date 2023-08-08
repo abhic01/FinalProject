@@ -41,8 +41,8 @@ function App() {
               <Nav.Link href="/expired" className="navbar-link">
                 Expired Bonds
               </Nav.Link>    
-              <Nav.Link href="/redeeming" className="navbar-link">
-                Redeeming Bonds
+              <Nav.Link href="/redeemed" className="navbar-link">
+                Redeemed Bonds
               </Nav.Link>  
               <Nav.Link href="/due_today" className="navbar-link">
                 Due Today Bonds
