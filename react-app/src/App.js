@@ -44,7 +44,7 @@ function App() {
               <Nav.Link href="/redeeming" className="navbar-link">
                 Redeeming Bonds
               </Nav.Link>  
-              <Nav.Link href="/Due_TOday" className="navbar-link">
+              <Nav.Link href="/due_today" className="navbar-link">
                 Due Today Bonds
               </Nav.Link>     
               <Nav.Link href="/recent" className="navbar-link">
