@@ -22,6 +22,11 @@ export const findRedeemedBonds = () => {
   return bonds;
 };
 
+export const findRecentBonds = () => {
+  const bonds = axios.get(`${hostNameUrl}/recent/bonds`);
+  return bonds;
+};
+
 export const findUserBonds = (user) => {
   const bonds = axios.get(`${hostNameUrl}/bonds/${user}`);
   return bonds;

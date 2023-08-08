@@ -7,7 +7,8 @@ import AllSecurities from "./components/AllSecurities";
 import ExpiringBonds from "./components/ExpiringSecurities"
 import ExpiredBonds from './components/ExpiredSecurities';
 import RedeemedBonds from './components/RedeemedSecurities';
-import DueTodayBonds from './components/RedeemedSecurities';
+import RecentBonds from './components/RecentDue';
+import DueTodayBonds from './components/DueTodaySecurities';
 import ProtectedRoute from "./components/ProtectedRoute";
 import UserBonds from "./components/UserBonds"
 import ClientPosition from './components/ClientPosition';
@@ -45,7 +46,10 @@ function App() {
               </Nav.Link>  
               <Nav.Link href="/Due_TOday" className="navbar-link">
                 Due Today Bonds
-              </Nav.Link>       
+              </Nav.Link>     
+              <Nav.Link href="/recent" className="navbar-link">
+                Recent due Bonds
+              </Nav.Link>    
               <Nav.Link href="/trades" className="navbar-link">
                 All Trades
               </Nav.Link>
@@ -71,6 +75,7 @@ function App() {
           <Route path="/expired" element={<ExpiredBonds />} />
           <Route path="/redeemed" element={<RedeemedBonds />} />
           <Route path="/due_today" element={<DueTodayBonds />} />
+          <Route path="/recent" element={<RecentBonds />} />
           <Route path="/bonds/:user" element={<UserBonds /> } />
           <Route path="/trades" element={<ClientPosition />} />
           <Route path="/login/*" element={<FirebaseLogin />} />
