@@ -27,5 +27,18 @@ public class SecurityService {
     public List<Security> getExpiredSecurities() {
         return this.securityRepository.getExpiredSecurities();
     }
+
+     public List<Security>getRedeemingSecurities() {
+        return this.securityRepository.getRedeemingSecurities();
+    }
+    public List<Security>getSecuritiesDueToday() {
+        return this.securityRepository.getSecuritiesDueToday();
+    }
+
+    public List<Security>getRecenSecurities() {
+        return this.securityRepository.getRecenSecurities();
+    }
+
+    
     
 }

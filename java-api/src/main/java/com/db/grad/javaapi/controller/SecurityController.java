@@ -33,4 +33,25 @@ public class SecurityController {
     public List<Security>getExpiredSecurities () {
         return SecurityService.getExpiredSecurities();
     }
+
+    @GetMapping("/redeemed/bonds")
+    public List<Security>getRedeemingSecurities () {
+        return SecurityService.getRedeemingSecurities();
+    }
+
+    @GetMapping("/due_today/bonds")
+    public List<Security>getSecuritiesDueToday () {
+        return SecurityService.getSecuritiesDueToday();
+    }
+
+    @GetMapping("/recent/bonds")
+    public List<Security>getRecenSecurities () {
+        return SecurityService.getRecenSecurities();
+    }
+
+
+    
+
+
+
 }
