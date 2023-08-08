@@ -5,6 +5,9 @@ import Container from 'react-bootstrap/Container';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AllSecurities from "./components/AllSecurities";
 import ExpiringBonds from "./components/ExpiringSecurities"
+import ExpiredBonds from './components/ExpiredSecurities';
+import RedeemedBonds from './components/RedeemedSecurities';
+import DueTodayBonds from './components/RedeemedSecurities';
 import ProtectedRoute from "./components/ProtectedRoute";
 import UserBonds from "./components/UserBonds"
 import ClientPosition from './components/ClientPosition';
@@ -33,7 +36,16 @@ function App() {
               </Nav.Link>
               <Nav.Link href="/expiring" className="navbar-link">
                 Expiring Bonds
-              </Nav.Link>              
+              </Nav.Link>    
+              <Nav.Link href="/expired" className="navbar-link">
+                Expired Bonds
+              </Nav.Link>    
+              <Nav.Link href="/redeeming" className="navbar-link">
+                Redeeming Bonds
+              </Nav.Link>  
+              <Nav.Link href="/Due_TOday" className="navbar-link">
+                Due Today Bonds
+              </Nav.Link>       
               <Nav.Link href="/trades" className="navbar-link">
                 All Trades
               </Nav.Link>
@@ -56,6 +68,9 @@ function App() {
           <Route path="/" element={<AllSecurities />} />
           <Route path="/bonds" element={<AllSecurities />} />
           <Route path="/expiring" element={<ExpiringBonds />} />
+          <Route path="/expired" element={<ExpiredBonds />} />
+          <Route path="/redeemed" element={<RedeemedBonds />} />
+          <Route path="/due_today" element={<DueTodayBonds />} />
           <Route path="/bonds/:user" element={<UserBonds /> } />
           <Route path="/trades" element={<ClientPosition />} />
           <Route path="/login/*" element={<FirebaseLogin />} />
