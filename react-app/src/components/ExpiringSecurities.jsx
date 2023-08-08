@@ -11,6 +11,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { findExpiringBonds } from '../services/SecurityServices';
+import { TradeButton } from './TradeButton';
+
 
 export default function ExpiringBonds () {
     // Initially empty list containing all the securities in the database
@@ -48,6 +50,7 @@ export default function ExpiringBonds () {
                         <TableCell>Face Value</TableCell>
                         <TableCell>Currency</TableCell>
                         <TableCell>Status</TableCell>
+                        <TableCell>Actions</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -68,6 +71,9 @@ export default function ExpiringBonds () {
                     <TableCell>{row.face_value}</TableCell>
                     <TableCell>{row.currency}</TableCell>
                     <TableCell>{row.status}</TableCell>
+                    <TableCell>
+        <TradeButton /> {TradeButton}
+		      </TableCell>
                     </TableRow>
                     ))}
                 </TableBody>

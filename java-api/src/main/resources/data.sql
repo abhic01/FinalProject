@@ -44,6 +44,10 @@ INSERT INTO Book_User (user_id, book_id) VALUES
 
 INSERT INTO Security
 (id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
+VALUES (0,'djfdj394','Test','hghg354','Test','2023-08-09',4.37,'CORP',1000,'USD','active');
+
+INSERT INTO Security
+(id,isin,bond_holder,cusip,issuer_name,maturity_date,coupon,type,face_value,currency,status) 
 VALUES (1,'XS1988387210','AZ Holdings Inc',NULL,'BNPParibasIssu 4,37% Microsoft Corp (USD)','2021-08-05',4.37,'CORP',1000,'USD','active');
 
 INSERT INTO Security
