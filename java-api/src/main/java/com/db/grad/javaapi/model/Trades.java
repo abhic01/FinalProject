@@ -3,12 +3,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table (name="Trades")
-public class Trades {
+public class Trades implements Serializable{
     @Id
+    @Column(name = "id", insertable = false, updatable = false)
     private int id;
     private int book_id;
     private int security_id;

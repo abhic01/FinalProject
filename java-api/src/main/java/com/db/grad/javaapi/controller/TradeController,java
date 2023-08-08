@@ -1,9 +1,18 @@
 package com.db.grad.javaapi.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import com.db.grad.javaapi.exception.ResourceNotFoundException;
+
 import com.db.grad.javaapi.model.Trades;
 import com.db.grad.javaapi.service.TradeService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1")
@@ -12,19 +21,13 @@ public class TradeController {
     private TradeService TradeService;
 
     @Autowired
-    public TradeController(TradeService TradeService) {
-        this.TradeService = TradeService;
+    public TradeController(TradeService ts) {
+        this.TradeService = ts;
     }
 
-    // Display all the bonds in the system
-    @GetMapping("/trades")
-    public List<Trades> getAllTrades() {
-        return TradeService.getAllTrades();
-    }
-
-    // Display all the bonds in the system
-    @GetMapping("/client_position")
-    public List<Trades> getClientPosition() {
-        return TradeService.getClientPosition();
+    @GetMapping("/client_position/{id}")
+    public ResponseEntity<List<Trades>> getId(@PathVariable(value = "id") String id) throws ResourceNotFoundException {
+        List<Trades> trades = TradeService.getClientPosition(id);
+        return ResponseEntity.ok().body(trades);
     }
 }

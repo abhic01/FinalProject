@@ -14,19 +14,25 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { findClientPosition } from '../services/TradeServices';
+import { useParams } from 'react-router-dom';
 
-export default function ClientPosition () {
+export default function ClientPosition (props) {
     // Initially empty list containing all the securities in the database
     const [Trades, setTrades] = React.useState([]);
+    const { id } = useParams();
+    const [Users, setId] = React.useState("1");
+    const handleFilterClick = () => {getTradesFromAPI();};
 
+   
     React.useEffect(() => {
         getTradesFromAPI();
     }, []
     )
+    
 
     // Function that gets all data from Security table and sets it to 'securities' variable
     const getTradesFromAPI = () => {
-        findClientPosition("1")
+        findClientPosition(id)
             .then(res =>{
                 setTrades(res.data);
             })
@@ -37,46 +43,56 @@ export default function ClientPosition () {
     }    
 
     return (
-    <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 0 }} aria-label="simple table">
-            <TableHead>
-                <TableRow>
-                    <TableCell>ID</TableCell>
-                    <TableCell>Book ID</TableCell>
-                    <TableCell>Security ID</TableCell>
-                    <TableCell>Counterparty ID</TableCell>
-                    <TableCell>Currency</TableCell>
-                    <TableCell>Trade Status</TableCell>
-                    <TableCell>Quantity</TableCell>
-                    <TableCell>Buy or Sell</TableCell>
-                    <TableCell>Trade Date</TableCell>
-                    <TableCell>Settlement Date</TableCell>
-                </TableRow>
-            </TableHead>
-            <TableBody>
-                {Trades.map((row) => (
-                <TableRow
-                key={row.id}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                >
-                <TableCell component="th" scope="row">
-                    {row.id}
-                </TableCell>
-                <TableCell>{row.id}</TableCell>
-                <TableCell>{row.book_id}</TableCell>
-                <TableCell>{row.security_id}</TableCell>
-                <TableCell>{row.counterparty_id}</TableCell>
-                <TableCell>{row.currency}</TableCell>
-                <TableCell>{row.t_status}</TableCell>
-                <TableCell>{row.quantity}</TableCell>
-                <TableCell>{row.unit_price}</TableCell>
-                <TableCell>{row.buy_sell}</TableCell>
-                <TableCell>{row.trade_date}</TableCell>
-                <TableCell>{row.settlement_date}</TableCell>
-                </TableRow>
-                ))}
-            </TableBody>
-        </Table>
-    </TableContainer>
+    <div>
+        <label htmlFor = "User ID">User ID:</label>
+        <input
+            type = "text"
+            id = "User ID"
+            value = {id}
+            onChange={(e) => setId(e.target.value)}
+        />
+        <button onClick = {handleFilterClick}>Filter</button>
+        <TableContainer component={Paper}>
+            <Table sx={{ minWidth: 0 }} aria-label="simple table">
+                <TableHead>
+                    <TableRow>
+                        <TableCell>ID</TableCell>
+                        <TableCell>Book ID</TableCell>
+                        <TableCell>Security ID</TableCell>
+                        <TableCell>Counterparty ID</TableCell>
+                        <TableCell>Currency</TableCell>
+                        <TableCell>Trade Status</TableCell>
+                        <TableCell>Quantity</TableCell>
+                        <TableCell>Buy or Sell</TableCell>
+                        <TableCell>Trade Date</TableCell>
+                        <TableCell>Settlement Date</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {Trades.map((row) => (
+                    <TableRow
+                    key={row.id}
+                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                    >
+                    <TableCell component="th" scope="row">
+                        {row.id}
+                    </TableCell>
+                    <TableCell>{row.id}</TableCell>
+                    <TableCell>{row.book_id}</TableCell>
+                    <TableCell>{row.security_id}</TableCell>
+                    <TableCell>{row.counterparty_id}</TableCell>
+                    <TableCell>{row.currency}</TableCell>
+                    <TableCell>{row.t_status}</TableCell>
+                    <TableCell>{row.quantity}</TableCell>
+                    <TableCell>{row.unit_price}</TableCell>
+                    <TableCell>{row.buy_sell}</TableCell>
+                    <TableCell>{row.trade_date}</TableCell>
+                    <TableCell>{row.settlement_date}</TableCell>
+                    </TableRow>
+                    ))}
+                </TableBody>
+            </Table>
+        </TableContainer>
+    </div>
     );
 }

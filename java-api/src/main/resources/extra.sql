@@ -56,6 +56,8 @@ JOIN
     Security AS S ON T.security_id = S.id
 JOIN
     Book_User AS BU ON T.book_id = BU.book_id
+WHERE
+    BU.User_ID = :user_id
 GROUP BY
     S.bond_holder,
     BU.User_ID,

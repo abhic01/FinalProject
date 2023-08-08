@@ -1,21 +1,17 @@
 package com.db.grad.javaapi.service;
 
-import com.db.grad.javaapi.model.Trades;
-import com.db.grad.javaapi.repository.TradeRepository;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.List;
+import com.db.grad.javaapi.model.Trades;
+import com.db.grad.javaapi.repository.TradeRepository;
 
 @Service
 public class TradeService {
-    private TradeRepository tradeRepository;
-
     @Autowired
-    public TradeService (TradeRepository tradeRepository){
-        this.tradeRepository = tradeRepository;
-    }
+    private TradeRepository tradesRepository;
 
-    public List<Trades> getAllTrades() {
-        return this.tradeRepository.findAllTrades();
+    public List<Trades> getClientPosition(String id) {
+        return tradesRepository.getClientPosition(id);
     }
 }

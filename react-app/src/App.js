@@ -34,8 +34,8 @@ function App() {
               <Nav.Link href="/expiring" className="navbar-link">
                 Expiring Bonds
               </Nav.Link>              
-              <Nav.Link href="/trades" className="navbar-link">
-                All Trades
+              <Nav.Link href="/client_position" className="navbar-link">
+                Client Position
               </Nav.Link>
               {/* <Nav.Link href="/bonds/:user" className="navbar-link">
                 My Bonds
@@ -57,7 +57,7 @@ function App() {
           <Route path="/bonds" element={<AllSecurities />} />
           <Route path="/expiring" element={<ExpiringBonds />} />
           <Route path="/bonds/:user" element={<UserBonds /> } />
-          <Route path="/trades" element={<ClientPosition />} />
+          <Route path="/client_position/:id" element={<ClientPosition />} />
           <Route path="/login/*" element={<FirebaseLogin />} />
           <Route path="/home" element={<Home />} />
           <Route path="/add/bond" element={<SecurityForm />} />
